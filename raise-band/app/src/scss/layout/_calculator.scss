@@ -1,10 +1,14 @@
 .calculator {
-    margin: 200px 10px 0;
+    margin: 175px 10px 0;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    background: #ffffff;
+    box-shadow: 0px 0px 75px rgba(91, 167, 202, 0.15);
     &__title {
         @include font(Epilogue, normal, 700, 22px, 23px, #111563);
         text-align: center;
     }
-    &__text {
+    &__descript {
         @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
         text-align: center;
     }
@@ -26,7 +30,7 @@
     }
     .form__total {
         margin-top: 10px;
-        &__title {
+        &__res {
             @include font(Epilogue, normal, 700, 22px, 23px, #c774ee);
             display: flex;
             justify-content: space-around;

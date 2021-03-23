@@ -3,7 +3,7 @@
     &__title {
         @include font(Epilogue, normal, 700, 22px, 23px, #111563);
     }
-    &__text {
+    &__descript {
         margin-top: 20px;
         @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
     }
@@ -46,7 +46,7 @@
                 margin-left: 10px;
                 @include font(Epilogue, normal, 700, 18px, 18px, #111563);
             }
-            &__text {
+            &__descript {
                 @include font(Open Sans, normal, 400, 16px, 24px, #63718E);
             }
         }
