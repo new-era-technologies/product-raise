@@ -65,7 +65,7 @@ function images() {
 
 exports.default = function () {
   browserSync.init({
-    server: { baseDir: "app/src" }
+    server: { baseDir: "app/build" }
   });
   watch(['app/src/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
     clean,

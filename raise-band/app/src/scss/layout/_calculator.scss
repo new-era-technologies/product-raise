@@ -1,0 +1,47 @@
+.calculator {
+    margin: 200px 10px 0;
+    &__title {
+        @include font(Epilogue, normal, 700, 22px, 23px, #111563);
+        text-align: center;
+    }
+    &__text {
+        @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
+        text-align: center;
+    }
+    .form__control {
+        margin-top: 40px;
+        .control {
+            width: 290px;
+            height: 50px;
+            margin-bottom: 15px;
+            padding: 0 20px;
+            background: #f9fafc;
+            box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14);
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            box-sizing: border-box;
+            @include font(Open Sans, normal, 400, 15px, 20px, #111563);
+        }
+    }
+    .form__total {
+        margin-top: 10px;
+        &__title {
+            @include font(Epilogue, normal, 700, 22px, 23px, #c774ee);
+            display: flex;
+            justify-content: space-around;
+        }
+        .form__submit {
+            margin-top: 30px;
+            width: 300px;
+            height: 50px;
+            background: #c774ee;
+            box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            @include font(Open Sans, normal, 700, 20px, 20px, #ffffff);
+            cursor: pointer;
+        }
+    }
+}
