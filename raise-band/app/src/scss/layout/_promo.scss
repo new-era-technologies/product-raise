@@ -16,6 +16,7 @@
         border-radius: 10px;
         outline: none;
         @include font(Open Sans, normal, 700, 20px, 20px, #FFFFFF);
+        cursor: pointer;
     }
     &__frame {
         margin-top: 40px;
