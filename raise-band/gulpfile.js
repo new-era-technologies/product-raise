@@ -53,23 +53,23 @@ function javascript() {
     .pipe(browserSync.stream());
 }
 
-// function images() {
-//   return src('app/assets/img/**/*')
-//     .pipe(cache(imagemin({
-//       interlaced: true,
-//       progressive: true,
-//       svgoPlugins: [{ removeViewBox: false }]
-//     })))
-//     .pipe(dest('app/assets/comp/img'));
-// }
+function images() {
+  return src('app/src/assets/img/**/*')
+    .pipe(cache(imagemin({
+      interlaced: true,
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }]
+    })))
+    .pipe(dest('app/build/assets/img'));
+}
 
 exports.default = function () {
   browserSync.init({
     server: { baseDir: "app/src" }
   });
-  watch(['app/src/html/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
+  watch(['app/src/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
     clean,
-    // images, 
+    images,
     parallel(html, css, javascript)))
     .on('change', browserSync.reload);
 };
