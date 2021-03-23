@@ -1,5 +1,7 @@
-@import "base/reset.scss";
+@import "base/reset";
+@import "base/fonts";
 @import "layout/header.scss";
+@import "layout/promo.scss";
 
 .main-wrapper {
     background: #FFFFFF;
