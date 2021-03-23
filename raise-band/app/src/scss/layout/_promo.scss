@@ -1,0 +1,23 @@
+.promo {
+    margin: 50px 10px 0;
+    &__title {
+        @include font(Epilogue, normal, 700, 22px, 23px, #111563);
+    }
+    &__text {
+        margin-top: 20px;
+        @include font(Open Sans, normal, 400, 18px, 27px, #63718e);
+    }
+    &__button {
+        width: 300px;
+        height: 53px;
+        margin-top: 30px;
+        background: #c774ee;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        @include font(Open Sans, normal, 700, 20px, 20px, #FFFFFF);
+    }
+    &__frame {
+        margin-top: 40px;
+    }
+}

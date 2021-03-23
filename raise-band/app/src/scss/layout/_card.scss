@@ -1,0 +1,10 @@
+.card {
+    margin: 50px 10px 0;
+    &__title {
+        @include font(Epilogue, normal, 700, 22px, 23px, #111563);
+    }
+    &__text {
+        margin-top: 20px;
+        @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
+    }
+}
