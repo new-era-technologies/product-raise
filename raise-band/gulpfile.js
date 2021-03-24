@@ -77,7 +77,7 @@ exports.default = function () {
   browserSync.init({
     server: { baseDir: "app/build" }
   });
-  watch(['app/src/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
+  watch(['app/src/html/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
     clean,
     // clearCache,
     images,

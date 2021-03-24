@@ -1,3 +1,47 @@
 .note {
     margin: 82px 10px 0;
+    &__title_box {
+        margin-top: 20px;
+    }
+    &__title {
+        @include font(Epilogue, normal, 700, 22px, 23px, #111563);
+    }
+    &__descript {
+        margin-top: 20px;
+        @include font(Open Sans, normal, 400, 18px, 27px, #63718e);
+        &--ad {
+            margin-top: 140px;
+        }
+    }
+    &__requirements {
+        margin-top: 30px;
+        position: relative;
+    }
+    &__notice-box {
+        position: absolute;
+        width: 300px;
+        height: 295px;
+        top: 40px;
+        left: 0;
+        padding: 30px 18px 0 30px;
+        background: #ffffff;
+        box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+        border-radius: 8px;
+        box-sizing: border-box;
+        .notice-box {
+            &__inner {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            &__title {
+                margin-left: 10px;
+                @include font(Epilogue, normal, 700, 18px, 18px, #111563);
+            }
+            &__descript {
+                @include font(Open Sans, normal, 400, 16px, 24px, #63718E);
+            }
+        }
+    }
 }
