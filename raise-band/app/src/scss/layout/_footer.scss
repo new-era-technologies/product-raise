@@ -19,5 +19,50 @@ footer {
                 }
             }
         }
+        &__call {
+            margin-top: 35px;
+        }
+        &__call > a,
+        &__call > p {
+            @include font(Roboto, normal, 400, 16px, 19px, #7e8183);
+            text-decoration: none;
+        }
+        &__call > a > b {
+            @include font(Roboto, normal, 700, 16px, 19px, #7e8183);
+        }
+        &__call > p {
+            margin-top: 5px;
+        }
+        &__rate {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        &__rate > img {
+            margin-right: 5px;
+        }
+        &__rate > span {
+            margin-left: 10px;
+            @include font(Open Sans, normal, 400, 16px, 16px, #c774ee);
+        }
+        &__soc {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+        }
+        &__soc > img {
+            margin-right: 10px;
+        }
+        &__cards,
+        &__sec {
+            margin-top: 30px;
+        }
+        &__cards > img {
+            margin-right: 10px;
+        }
+        &__cop {
+            margin-top: 40px;
+            @include font(Roboto, normal, 400, 14px, 20px, #3a3a3a);
+        }
     }
 }
