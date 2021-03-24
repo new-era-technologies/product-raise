@@ -9,7 +9,7 @@ const { src, dest, watch, series, parallel } = require('gulp'),
   purge = require('gulp-css-purge'),
   minifyCss = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
-  uglify = require('gulp-uglify-es').default,
+  uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
   jsValidate = require('gulp-jsvalidate');
 
@@ -18,7 +18,11 @@ sass.compiler = require('node-sass');
 
 function clean() {
   return src('app/build/**/*', { read: false })
-  .pipe(del());
+    .pipe(del());
+}
+
+function clearCache() {
+  return cache.clearAll();
 }
 
 function html() {
@@ -55,10 +59,16 @@ function javascript() {
 
 function images() {
   return src('app/src/assets/img/**/*')
-    .pipe(cache(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }]
+    .pipe(cache(imagemin([
+      imagemin.svgo({
+        plugins: [
+          {
+            removeViewBox: true
+          }
+        ]
+      })
+    ], {
+      verbose: true
     })))
     .pipe(dest('app/build/assets/img'));
 }
@@ -69,6 +79,7 @@ exports.default = function () {
   });
   watch(['app/src/*.html', 'app/src/scss/**/*.scss', 'app/src/js/**/*.js'], series(
     clean,
+    // clearCache,
     images,
     parallel(html, css, javascript)))
     .on('change', browserSync.reload);
