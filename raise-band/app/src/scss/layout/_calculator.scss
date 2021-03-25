@@ -8,23 +8,61 @@
         text-align: center;
     }
     &__descript {
+        margin-top: 10px;
         @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
         text-align: center;
     }
     .form__control {
         margin-top: 40px;
         .control {
-            width: 290px;
-            height: 50px;
-            margin-bottom: 15px;
-            padding: 0 20px;
-            background: #f9fafc;
-            box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14);
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            box-sizing: border-box;
-            @include font(Open Sans, normal, 400, 15px, 20px, #111563);
+            display: flex;
+            justify-content: center;
+            &__btn, &__list {
+                width: 290px;
+                height: 50px;
+                margin-bottom: 15px;
+                padding: 0 20px;
+                background: #f9fafc;
+                box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14);
+                border-radius: 10px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include font(Open Sans, normal, 400, 15px, 20px, #111563);
+                cursor: pointer;
+            }
+            .dropbtn::after {
+                content: url("../assets/img/icons/arrow-down-calc.svg");
+            }
+            &__list {
+                height: auto;
+                margin-bottom: 0;
+                padding: 5px 10px;
+                top: 55px;
+                flex-direction: column;
+                align-items: flex-start;
+                transform: translateY(-4em);
+                visibility: hidden;
+                transition: all 0.2s ease-in-out;
+                opacity: 0;
+                &__item {
+                    width: 100%;
+                    padding: 5px 0;
+                }
+            }
+            .pages {
+                cursor: default;
+                #min-pages, #max-pages {
+                    cursor: pointer;
+                }
+            }
+            .calendar {
+                justify-content: center;
+            }
+            .calendar > img {
+                margin-right: 8px;
+            }
         }
     }
     .form__total {

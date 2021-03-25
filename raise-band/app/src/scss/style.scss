@@ -32,6 +32,8 @@
     z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.show {
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }

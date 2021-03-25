@@ -2,36 +2,57 @@
     <div class="calculator">
         <h3 class="calculator__title">Calculator</h3>
         <p class="calculator__descript">Nam libero tempore, cum soluta nobis est eligendi optio</p>
-        <form class="form" action="#" method="POST">
+        <form class="form" method="POST">
             <div class="form__control">
-                <select class="control control__colors" name="colors" id="colors">
-                    <option selected hidden>Colors</option>
-                    <option value="red">red</option>
-                    <option value="green">green</option>
-                    <option value="blue">blue</option>
-                    <option value="orange">orange</option>
-                </select>
-                <select class="control control__size" name="size" id="size">
-                    <option selected hidden>Size</option>
-                    <option value="100%">100%</option>
-                    <option value="150%">150%</option>
-                    <option value="200%">200%</option>
-                </select>
-                <div class="control control__val">100</div>
-                <div class="control control__calendar"></div>
-                <select class="control control__city" name="city" id="city">
-                    <option selected hidden>City</option>
-                    <option value="kyiv">Kyiv</option>
-                    <option value="odessa">Odessa</option>
-                    <option value="rivne">Rivne</option>
-                    <option value="lviv">Lviv</option>
-                </select>
-                <select class="control control__delivery" name="delivery" id="delivery">
-                    <option selected hidden>Delivery</option>
-                    <option value="new post">New Post</option>
-                    <option value="ukrposhta">Ukrposhta</option>
-                    <option value="pickup">Pickup</option>
-                </select>
+                <div class="control dropdown">
+                    <div id="colors" class="control__btn dropbtn">Colors</div>
+                    <ul class="control__list dropdown-content">
+                        <li class="control__list__item">Red</li>
+                        <li class="control__list__item">Green</li>
+                        <li class="control__list__item">Blue</li>
+                        <li class="control__list__item">Orange</li>
+                    </ul>
+                </div>
+                <div class="control dropdown">
+                    <div id="size" class="control__btn dropbtn">Size</div>
+                    <ul class="control__list dropdown-content">
+                        <li class="control__list__item">100%</li>
+                        <li class="control__list__item">150%</li>
+                        <li class="control__list__item">200%</li>
+                    </ul>
+                </div>
+                <!-- change item -->
+                <div class="control">
+                    <div class="control__btn pages">
+                        <img id="min-pages" src="assets/img/icons/minus.svg" alt="minus-icon">
+                        <span id="pages-count">100</span>
+                        <img id="max-pages" src="assets/img/icons/plus.svg" alt="plus-icon">
+                    </div>
+                </div>
+                <!-- roll calendar -->
+                <div class="control">
+                    <div id="flatpickr" class="control__btn calendar">
+                        <img src="assets/img/icons/calendar.svg" alt="calendar-icon">
+                        <span id="date-span"></span>
+                    </div>
+                </div>
+                <div class="control dropdown">
+                    <div id="city" class="control__btn dropbtn">City</div>
+                    <ul class="control__list dropdown-content">
+                        <li class="control__list__item">Kyiv</li>
+                        <li class="control__list__item">Odessa</li>
+                        <li class="control__list__item">Rivne</li>
+                        <li class="control__list__item">Lviv</li>
+                    </ul>
+                </div>
+                <div class="control dropdown">
+                    <div id="delivery" class="control__btn dropbtn">Delivery</div>
+                    <ul class="control__list dropdown-content">
+                        <li class="control__list__item">New Post</li>
+                        <li class="control__list__item">Ukrposhta</li>
+                        <li class="control__list__item">Pickup</li>
+                    </ul>
+                </div>
             </div>
             <div class="form__total">
                 <output class="form__total__res" name="result">56.25 $</output>
