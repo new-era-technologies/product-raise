@@ -46,6 +46,7 @@ footer {
             @include font(Open Sans, normal, 400, 16px, 16px, #c774ee);
         }
         &__info {
+            width: 105px;
             margin-top: 20px;
             &__btn {
                 width: 105px;
@@ -89,6 +90,7 @@ footer {
                 margin-right: 10px;
                 display: block;
                 border-radius: 6px;
+                opacity: .2;
                 &--facebook {
                     background: url("../assets/img/icons/facebook.svg");
                 }
@@ -103,7 +105,7 @@ footer {
                 }
             }
             &__link:hover {
-                opacity: 0.2;
+                opacity: 1;
                 transition: 0.2s;
             }
         }
