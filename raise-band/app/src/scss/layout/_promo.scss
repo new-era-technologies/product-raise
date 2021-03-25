@@ -12,14 +12,11 @@
         height: 53px;
         margin-top: 30px;
         background: #c774ee;
-        border: none;
         border-radius: 10px;
-        outline: none;
         display: flex;
         justify-content: center;
         align-items: center;
         @include font(Open Sans, normal, 700, 20px, 20px, #FFFFFF);
-        cursor: pointer;
         text-decoration: none;
     }
     &__frame {
