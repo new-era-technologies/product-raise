@@ -1,23 +1,52 @@
 header {
-    height: 70px;
     box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
     .header {
-        height: 100%;
-        margin: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: relative;
+        &__main {
+            height: 70px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         &__logo {
             width: 115px;
         }
-        .nav {
-            cursor: pointer;
-            &__line {
-                width: 30px;
-                height: 3px;
-                margin: 3px 0;
-                background: #63718E;
-                border-radius: 5px;
+        &__nav--desk {
+            display: none;
+        }
+        &__nav--burger {
+            .burger {
+                cursor: pointer;
+                &__line {
+                    width: 30px;
+                    height: 3px;
+                    margin: 3px 0;
+                    background: #63718e;
+                    border-radius: 5px;
+                }
+            }
+        }
+        &__modal {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            transition: .2s width;
+            background: #111563;
+            z-index: 2;
+            &__close {
+                display: flex;
+                justify-content: flex-end;
+            }
+            &__but {
+                margin: 20px 10px;
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 26px;
+                color: #ffffff;
+                cursor: pointer;
             }
         }
     }
