@@ -14,10 +14,24 @@
 @import "layout/footer";
 
 .main-wrapper {
-    background: #FFFFFF;
+    background: #ffffff;
 }
 
 .container {
     width: 320px;
     margin: 0 auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

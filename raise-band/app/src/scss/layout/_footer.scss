@@ -45,13 +45,67 @@ footer {
             margin-left: 10px;
             @include font(Open Sans, normal, 400, 16px, 16px, #c774ee);
         }
+        &__info {
+            margin-top: 20px;
+            &__btn {
+                width: 105px;
+                height: 35px;
+                border: 2px solid #7e8183;
+                box-sizing: border-box;
+                border-radius: 28px;
+                background: #1c1e1f;
+                outline: none;
+                @include font(Roboto, normal, 400, 16px, 19px, #7e8183);
+                cursor: pointer;
+            }
+            &__btn::after {
+                content: url("../assets/img/icons/arrow-down-foot.svg");
+                margin-left: 15px;
+            }
+            &__content {
+                box-sizing: border-box;
+                border-radius: 5px;
+                background: #1c1e1f;
+
+            }
+            &__link {
+                padding: 10px;
+                display: block;
+                @include font(Roboto, normal, 400, 16px, 19px, #7e8183);
+                text-decoration: none;
+            }
+            &__link:hover {
+                color: #ffffff;
+                transition: .2s;
+            }
+        }
         &__soc {
             margin-top: 40px;
             display: flex;
             align-items: center;
-        }
-        &__soc > img {
-            margin-right: 10px;
+            &__link {
+                width: 36px;
+                height: 36px;
+                margin-right: 10px;
+                display: block;
+                border-radius: 6px;
+                &--facebook {
+                    background: url("../assets/img/icons/facebook.svg");
+                }
+                &--insta {
+                    background-image: url("../assets/img/icons/insta.svg");
+                }
+                &--youtube {
+                    background-image: url("../assets/img/icons/youtube.svg");
+                }
+                &--pinterest {
+                    background-image: url("../assets/img/icons/pinterest.svg");
+                }
+            }
+            &__link:hover {
+                opacity: 0.2;
+                transition: 0.2s;
+            }
         }
         &__cards,
         &__sec {
