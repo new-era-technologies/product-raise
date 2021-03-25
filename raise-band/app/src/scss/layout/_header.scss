@@ -12,6 +12,9 @@ header {
         &__logo {
             width: 115px;
         }
+        &__logo > a {
+            display: block;
+        }
         &__nav--desk {
             display: none;
         }
