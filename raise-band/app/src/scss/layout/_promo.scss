@@ -7,7 +7,7 @@
         margin-top: 20px;
         @include font(Open Sans, normal, 400, 18px, 27px, #63718e);
     }
-    &__button {
+    &__but {
         width: 300px;
         height: 53px;
         margin-top: 30px;
@@ -15,8 +15,12 @@
         border: none;
         border-radius: 10px;
         outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include font(Open Sans, normal, 700, 20px, 20px, #FFFFFF);
         cursor: pointer;
+        text-decoration: none;
     }
     &__frame {
         margin-top: 40px;
