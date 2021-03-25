@@ -32,7 +32,7 @@ header {
             height: 100%;
             position: fixed;
             top: 0;
-            transition: .2s width;
+            transition: 0.2s width;
             background: #111563;
             z-index: 2;
             &__close {
@@ -47,6 +47,26 @@ header {
                 font-size: 26px;
                 color: #ffffff;
                 cursor: pointer;
+            }
+            &__list {
+                margin: 20px 20px 0;
+                display: none;
+                flex-direction: column;
+                align-items: flex-end;
+                &__item {
+                    margin-top: 20px;
+                }
+                &__item:last-of-type {
+                    margin-top: 60px;
+                }
+            }
+            &__link {
+                @include font(Roboto, normal, 400, 16px, 19px, #7e8183);
+                text-decoration: none;
+            }
+            &__link:hover {
+                color: #c774ee;
+                transition: 0.2s;
             }
         }
     }
