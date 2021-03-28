@@ -13,7 +13,7 @@ let calcInfoObj = {};
 
 //show/hide menu by click
 dropBtn.forEach(
-    v => v.addEventListener('click', function (e) {
+    v => v.addEventListener('click', function () {
         this.closest('.dropdown').children[1].classList.toggle('show');
     })
 )
@@ -29,7 +29,7 @@ window.addEventListener('click', function (e) {
 
 //change value in dropdown button
 menuItems.forEach(
-    it => it.addEventListener('click', function (e) {
+    it => it.addEventListener('click', function () {
         this.closest('.dropdown').children[0].innerText = this.innerText;
         this.closest('.dropdown').children[1].classList.remove('show');
     })

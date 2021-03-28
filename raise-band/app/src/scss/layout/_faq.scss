@@ -26,14 +26,24 @@
                     @include font(Epilogue, normal, 700, 18px, 18px, #111563);
                 }
             }
+            .info__inner > img {
+                transition: 0.2s ease-in-out;
+            }
             .info__answ {
+                display: none;
+                transform: translateY(-4em);
+                visibility: hidden;
+                transition: all 0.2s ease-in-out;
+                opacity: 0;
+            }
+            .info__answ > hr {
+                margin-top: 10px;
+                border: 1px solid #f0f4fd;
+            }
+            .info__answ > p {
                 margin-top: 10px;
                 @include font(Open Sans, normal, 400, 16px, 24px, #63718e);
             }
-        }
-        .container__info > hr {
-            margin-top: 10px;
-            border: 1px solid #f0f4fd;
         }
         &--but {
             margin-top: 30px;
@@ -44,12 +54,12 @@
     &__but {
         width: 181px;
         height: 62px;
-        padding: 18px 22px;
         @include font(Open Sans, normal, 700, 20px, 20px, #ffffff);
         background: #c774ee;
-        border: none;
         border-radius: 10px;
-        outline: none;
-        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 }
