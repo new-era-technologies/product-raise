@@ -2,12 +2,12 @@
 
 //declare variables
 const dropBtn = document.querySelectorAll('.control__btn.dropbtn'),
-    dropCont = document.querySelectorAll('.dropdown-content'),
-    menuItems = document.querySelectorAll('.control__list__item'),
-    minPages = document.getElementById('min-pages'),
-    maxPages = document.getElementById('max-pages'),
-    pagesCount = document.getElementById('pages-count'),
-    dateCont = document.getElementById('date-span');
+      dropCont = document.querySelectorAll('.dropdown-content'),
+      menuItems = document.querySelectorAll('.control__list__item'),
+      minPages = document.getElementById('min-pages'),
+      maxPages = document.getElementById('max-pages'),
+      pagesCount = document.getElementById('pages-count'),
+      dateCont = document.getElementById('date-span');
 
 //show/hide menu by click
 dropBtn.forEach(
@@ -45,20 +45,15 @@ maxPages.addEventListener('click', function () {
     pagesCount.innerHTML = Number(pagesCount.innerHTML) + 1;
 })
 
-
-
-
-
-
-
 //show calendar button with current date
 const date = new Date();
 const mon = date.toLocaleString('default', { month: 'short' });
 dateCont.innerHTML = date.getUTCDate() + ' ' + mon + ' ' + date.getFullYear();
 
+//set calendar
 flatpickr('#flatpickr', {
-    dateFormat: "d F Y",
-    shorthandCurrentMonth: true,
-    allowInput: true,
-    appendTo: dateCont,
+    dateFormat: "j M Y",
+    onChange: function (selectedDates, dateStr, instance) {
+        dateCont.innerHTML = dateStr;
+    }
 })
