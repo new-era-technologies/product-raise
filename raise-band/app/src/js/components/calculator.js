@@ -7,7 +7,9 @@ const dropBtn = document.querySelectorAll('.control__btn.dropbtn'),
       minPages = document.getElementById('min-pages'),
       maxPages = document.getElementById('max-pages'),
       pagesCount = document.getElementById('pages-count'),
-      dateCont = document.getElementById('date-span');
+      dateCont = document.getElementById('date-span'),
+      submitCalc = document.getElementById('submit-calculator');
+let calcInfoObj = {};
 
 //show/hide menu by click
 dropBtn.forEach(
@@ -56,4 +58,18 @@ flatpickr('#flatpickr', {
     onChange: function (selectedDates, dateStr, instance) {
         dateCont.innerHTML = dateStr;
     }
+})
+
+//console.log object by click send calculator info
+submitCalc.addEventListener('click', function (e) {
+    e.preventDefault();
+    calcInfoObj = {
+        colors: document.getElementById('colors').innerHTML != 'Colors' ? document.getElementById('colors').innerHTML : 'empty',
+        size: document.getElementById('size').innerHTML != 'Size' ? document.getElementById('size').innerHTML : 'empty',
+        pages: document.getElementById('pages-count').innerHTML,
+        date: document.getElementById('date-span').innerHTML,
+        city: document.getElementById('city').innerHTML != 'City' ? document.getElementById('city').innerHTML : 'empty',
+        delivery: document.getElementById('delivery').innerHTML != 'Delivery' ? document.getElementById('delivery').innerHTML : 'empty'
+    }
+    console.log(calcInfoObj);
 })
