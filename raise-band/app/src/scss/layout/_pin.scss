@@ -1,5 +1,5 @@
 .pin {
-    margin: 70px 10px 0;
+    margin-top: 70px;
     &__title {
         @include font(Epilogue, normal, 700, 22px, 23px, #111563);
     }
@@ -20,6 +20,8 @@
             overflow-x: auto;
             align-items: baseline;
             -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             &::-webkit-scrollbar {
                 display: none;
             }
@@ -34,6 +36,9 @@
     }
     &__info {
         margin-top: 15px;
+        &__list {
+            height: 150px;
+        }
         &__item {
             display: none;
             @include font(Open Sans, normal, normal, 16px, 24px, #63718e);
