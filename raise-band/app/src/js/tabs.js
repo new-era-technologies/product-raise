@@ -11,8 +11,10 @@ for (let i = 0; i < tabLink.length; i++) {
         for (let i = 0; i < tabContItem.length; i++) {
             tabContItem[i].classList.remove('show');
             tabContItem[i].classList.remove('block');
+            tabLink[i].classList.remove('active-tab');
         }
         //show current tabcontent
+        tabLink[i].classList.add('active-tab');
         tabContItem[i].classList.add('block');
         setTimeout(function () {
             tabContItem[i].classList.add('show');

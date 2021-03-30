@@ -45,3 +45,7 @@
 .transform-arrow {
     transform: rotate(540deg);
 }
+
+.active-tab {
+    @include font(Open Sans, normal, normal, 18px, 27px, #c774ee);
+}
